@@ -88,7 +88,12 @@ width: 100%;
   min-width: 100%;
   min-height: 100%; */
 }
-
+.content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
 .picture img{
   width:80%;
 
@@ -174,6 +179,11 @@ background-color: rgb(167, 167, 167);
 } */ 
 
 
+.mapp{
+  display: flex;
+  justify-content: left;
+  padding: 20px;
+}
 
 #social-platforms {
   
@@ -321,29 +331,45 @@ background-color: rgb(167, 167, 167);
   margin-bottom: 2rem;
   padding: 1rem;
   
-  background: #6bbfb5;
+  background: #9bcbc5;
   border-radius: 20px;
+}
+.content1{
+  padding: 10px;
+  width: 900px;
+  background-color: #9bcbc5;
 }
 .contact{
   padding: 10px;
-  width: 900px;
+  
 }
 .last-section{
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
- width: 80%;
+  justify-content: space-evenly;
+ /* width: 80%; */
  margin: auto;
- color: white;
- 
+ color: #3E3E3E;
+ padding: 20px;
 }
-
+.color1-section{
+  background-color: #ffffff;
+  color: #333;
+}
 .color-section{
   background-color: rgb(70, 69, 69);
 }
-.color1-section{
-  background-color: #78b6af;
-  color: #333;
+.contact{
+
+}
+.last-section1{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+ /* width: 80%; */
+ margin: auto;
+ color: white;
+ padding: 20px;
 }
 .footer{
   background-color: rgb(70, 69, 69);
@@ -358,11 +384,8 @@ background-color: rgb(167, 167, 167);
 #social-platforms{
   background-color: #78b6af;
 }
-.content1{
-  padding: 10px;
-  width: 900px;
-  background-color: #6bbfb5;
-}
+
+
 .content2{
   padding: 10px;
   width: 900px;
@@ -610,18 +633,19 @@ ol, li {
 
 .background {
   display: flex;
-  background-color: #78B6AF;
+  background-color: #ffffff;
 }
 
 .container {
+
   flex: 0 1 700px;
-  margin: auto;
+  /* margin: auto; */
   padding: 10px;
 }
 
 .screen {
   position: relative;
-  background: #3e3e3e;
+  background: #90BEB9;
   border-radius: 15px;
 }
 
@@ -702,7 +726,7 @@ ol, li {
   display: flex;
   flex-direction: column;
   position: relative;
-  color:#6bbfb5;
+  color:#3E3E3E;
   font-size: 26px;
 }
 
@@ -768,7 +792,7 @@ ol, li {
 }
 
 .app-form-button:hover {
-  color:#6BBFB5;
+  color:#307D74;
 }
 
 /* .credits {

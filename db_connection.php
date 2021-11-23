@@ -1,7 +1,7 @@
 <?php
 
 
-$db = mysqli_connect("localhost","admin","123","baza");
+$db = mysqli_connect("localhost","admin","123","bazunia");
 
 if(!$db)
 {
