@@ -29,7 +29,8 @@ a.button{
     color: white;
     border-radius: 1rem;
     margin: 5px;
-  }
+}
+
 .dwa{
 display: flex;
 flex-direction: row;
