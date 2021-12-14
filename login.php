@@ -11,9 +11,33 @@
     <link rel="Shortcut icon" href="miniaturka.png" />
 
 </head>
+
+    
+
+    
+
 <body class="admin-panel">
+<header>
+        <img src="logo_1.png" width="100" height="100"><h1>Skyair</h1>
+        <a href="logout.php" class="button">wyloguj </a>
+    </header>
+   
+   <hr>
+    <nav>
+        <section style="background: #eeeeee; color: #fff;">
+            
+            <nav class="stroke">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="ourteam.html">Our team</a></li>
+          <li><a href="flights.html">Flights</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        </section>
+            </nav>
         <?php
 include('db_connection.php');
+if (isset($_POST['text'],$_POST['password']))
 $username = $_POST['text'];
 $password = $_POST['password'];
 
@@ -27,7 +51,8 @@ $password = $_POST['password'];
     $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
     $count = mysqli_num_rows($result);
     if ($count == 1){
-        echo "<h1><center> Udane logowanie!! </center></h1>";
+        $_SESSION["name"]= $username;
+        echo "<h1> Udane logowanie!!</h1>";
     }
     else{
         echo "<h1> Błędny login :(( </h1>";
@@ -38,14 +63,18 @@ $password = $_POST['password'];
 include "db_connection.php";
 if (!$db) {
     die ("connection failed: ". mysqli_connect_error());
+    }
+    if (isset($_SESSION["name"])){
+        $sql = "SELECT `id`, `name`, `email`, `message` FROM messages";
+        $result = mysqli_query($db, $sql);
 
-}
-$sql = "SELECT `id`, `NAME`, `EMAIL`, `MESSAGE` FROM messages";
-$result = mysqli_query($db, $sql);
+    }
+
+
 
 if (mysqli_num_rows($result) > 0) {
     while($row = mysqli_fetch_assoc($result)) {
-    echo "id: " . $row["id"]. "<br>"."  NAME: " . $row["name"]. "<br>"."  EMAIL: "."<br>"."  MESSAGE: "."<br>";
+    echo "id: " . $row["id"]. "<br>"."  NAME: " . $row["name"]. "<br>"."  EMAIL: ". $row["email"]."<br>"."  MESSAGE: ". $row["message"]."<br>";
 }
 }else{
     echo "0 results";

@@ -113,6 +113,19 @@ header b:hover{
   background-color: #bf7c6b;
   color:white;
 }
+a.button5{
+  border: 3px solid #052a76;
+  padding: 2px;
+  /* position: absolute;
+  right: 20px;
+  top: 20px; */
+  background-color:#003fbd;
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  color: rgb(198, 0, 0);
+  border-radius: 1rem;
+  margin: 5px;
+}
 .fish-section{
   display: flex;
   flex-direction: row;
@@ -314,12 +327,7 @@ background-color: rgb(167, 167, 167);
 }
 
 
-@media screen and (max-width: 900px) {
-.sok-section{
-  width: 40%;
-}
 
-}
 .big-kot{
   margin: 50px;
   
@@ -359,9 +367,8 @@ background-color: rgb(167, 167, 167);
 .color-section{
   background-color: rgb(70, 69, 69);
 }
-.contact{
 
-}
+
 .last-section1{
   display: flex;
   flex-direction: row;
@@ -625,11 +632,7 @@ ol, li {
 
 
 
-/* body, button, input {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  letter-spacing: 1.4px;
-} */
+
 
 .background {
   display: flex;
@@ -639,7 +642,7 @@ ol, li {
 .container {
 
   flex: 0 1 700px;
-  /* margin: auto; */
+  
   padding: 10px;
 }
 
@@ -795,16 +798,7 @@ ol, li {
   color:#307D74;
 }
 
-/* .credits {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 20px;
-  color: #ffa4bd;
-  font-family: 'Roboto Condensed', sans-serif;
-  font-size: 16px;
-  font-weight: normal;
-} */
+
 
 .credits-link {
   display: flex;
@@ -864,7 +858,6 @@ a{color:inherit;text-decoration:none}
 	max-width:525px;
 	min-height:670px;
 	position:relative;
-	/* background:url(https://raw.githubusercontent.com/khadkamhn/day-01-login-form/master/img/bg.jpg) no-repeat center; */
 	box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);
 }
 .login-html{
@@ -998,3 +991,39 @@ a{color:inherit;text-decoration:none}
 .foot-lnk{
 	text-align:center;
 }
+@media screen and (max-width: 900px) {
+  .big-sok{
+    display: flex;
+    flex-direction: row;
+    width: 40%;
+  }
+  .sok-section{
+  display: flex;
+  flex-direction: row;
+  width: 40%;
+}
+
+@media (max-width:900px) {
+  body{
+    background-color: red;
+  }
+  
+}
+@media screen and (max-width: 900px) {
+  .kot-section{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+  }
+  .big-kot{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+  }
+}
+@media screen and (max-width: 900px) {
+  .last-section{
+    display: flex;
+    flex-direction: column;
+    
+  }
